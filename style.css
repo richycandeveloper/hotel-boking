@@ -69,37 +69,65 @@ p{
    background: #333;
    color: #f7c08a;
 }
- /* Navbar */
- #navbar{
-    background: #333;
-    color:#fff;
-    overflow: auto;
- }
- #navbar a{
-    color: #fff;
- }
+ /* Basic styles for the nav */
+#navbar {
+   background: #333;
+   color: #fff;
+   padding: 10px 0;
+}
 
+.container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
 
- #navbar h1{
-    float: left;
-    padding-top:20px;
+.logo a {
+   color: #fff;
+   text-decoration: none;
+   font-size: 24px;
+}
 
- }
- #navbar ul li {
-    float:left;
- }
- #navbar ul li a {
-    display:block;
-    padding: 20px;
-    text-align: center;
- }
- #navbar ul li a:hover,
- #navbar ul li a.curent{
-    background-color: #444;
-    color: #f7c08a;
- }
+ul {
+   list-style: none;
+   display: flex;
+   margin: 0;
+   padding: 0;
+}
 
+ul li {
+   margin: 0 10px;
+}
 
+ul li a {
+   color: #fff;
+   text-decoration: none;
+   font-size: 18px;
+}
+
+/* Styles for the hamburger menu icon */
+.menu-icon {
+   display: none;
+   font-size: 28px;
+   cursor: pointer;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+   .menu-icon {
+       display: block;
+   }
+
+   ul {
+       display: none;
+       flex-direction: column;
+       width: 100%;
+   }
+
+   ul.show {
+       display: flex;
+   }
+}
  /* showcase */
  #showcase{
    background: url('images/showcase\ .jpg') no-repeat center center/cover;
